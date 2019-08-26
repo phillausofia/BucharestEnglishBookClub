@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/author_and_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        tools:text="Tennesse Williamns - The Roman Spring
+of Mrs. Stone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:orientation="horizontal">
+
+     <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:src="@drawable/hour_icon"
+         android:maxHeight="13dp"
+         android:maxWidth="13dp"
+         android:adjustViewBounds="true"
+         android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/date_and_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingLeft="16dp"
+        tools:text = "Thursday, 18 Jul 2019, 19:00 at"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/location_pin"
+        android:maxWidth="16dp"
+        android:maxHeight="16dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingLeft="20dp"
+        tools:text = "Ceai la Vlaicu\nAurel Vlaicu 47, Bucharest, Romania" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:autoLink="web"
+        tools:text = "Hello! On the 11th of July, we'll discuss a novella by Tennessee Williamns, The Roman Spring of Mrs. Stone. You can find it here: http://bit.ly/TheRomanSpring Although it's 45 pages long, the text is quite dense.  The Roman Spring of Mrs. Stone is about a wealthy, fiftyish American widow, recently a famous stage beauty, but now "/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/join_events_social_media"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/facebook_icon"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"
+        android:id="@+id/facebook_event"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/meetup_icon"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="75dp"
+        android:maxHeight="75dp"
+        android:id="@+id/meetup_event"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/couchsurfing_icon"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="40dp"
+        android:maxHeight="40dp"
+        android:id="@+id/couchsurfing_event"/>
+
+    </LinearLayout>
+</LinearLayout>

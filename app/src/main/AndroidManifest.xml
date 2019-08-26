@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bebc.android.bucharestenglishbookclub">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.bebc.android.bucharestenglishbookclub.AboutActivity" android:label="About"></activity>
+        <activity android:name="com.bebc.android.bucharestenglishbookclub.FutureEventsActivity" android:label="Future Events"></activity>
+        <activity android:name="com.bebc.android.bucharestenglishbookclub.ProposeActivity" android:label="Propose a short story"></activity>
+        <activity android:name="com.bebc.android.bucharestenglishbookclub.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false" />
+    </application>
+
+
+</manifest>

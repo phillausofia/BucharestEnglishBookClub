@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    tools:context = "bebc.android.bucharestenglishbookclub.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:divider="?android:listDivider">
+        
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/about"
+            android:id="@+id/about"/>
+
+        <TextView
+            style = "@style/CategoryStyle"
+            android:text="@string/future_events"
+            android:id="@+id/future_events"
+            />
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/the_road_so_far"
+            android:id="@+id/past_events"/>
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/propose_short_story"
+            android:id="@+id/propose"/>
+
+        
+
+    </LinearLayout>
+</ScrollView>
