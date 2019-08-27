@@ -22,9 +22,15 @@
             android:id="@+id/future_events"
             />
         <TextView
+            style = "@style/CategoryStyle"
+            android:text="See past events"
+            android:id="@+id/past_events"
+
+            />
+        <TextView
             style="@style/CategoryStyle"
             android:text="@string/the_road_so_far"
-            android:id="@+id/past_events"/>
+            android:id="@+id/past_readings"/>
         <TextView
             style="@style/CategoryStyle"
             android:text="@string/propose_short_story"

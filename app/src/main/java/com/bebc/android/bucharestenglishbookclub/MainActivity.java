@@ -49,8 +49,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.past_events).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PastEventsActivity.class));
+            }
+        });
+
         //We find the TextView with the id past_events and set a click listener on it
-        TextView pastEventsView = findViewById(R.id.past_events);
+        TextView pastEventsView = findViewById(R.id.past_readings);
         //The click listener will take us to a Google Docs
         pastEventsView.setOnClickListener(new View.OnClickListener() {
             @Override
