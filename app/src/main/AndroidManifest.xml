@@ -17,6 +17,7 @@
         <activity android:name="com.bebc.android.bucharestenglishbookclub.AboutActivity" android:label="About"></activity>
         <activity android:name="com.bebc.android.bucharestenglishbookclub.FutureEventsActivity" android:label="Future Events"></activity>
         <activity android:name="com.bebc.android.bucharestenglishbookclub.ProposeActivity" android:label="Propose a short story"></activity>
+        <activity android:name=".PastEventsActivity" android:label="Past events"></activity>
         <activity android:name="com.bebc.android.bucharestenglishbookclub.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -29,5 +29,9 @@
     <string name = "proposal_email_subject">Short story proposal</string>
     <string name="proposal_email_address">iulian.pralea@hotmail.com</string>
     <string name="join_events_social_media">Join the event on social media:</string>
+    <string name="no_future_events">No future events found.</string>
+    <string name="no_data_found">No data found.</string>
+    <string name="no_past_events">No past events found!</string>
+    <string name="no_internet_connection">No Internet connection.</string>
 
 </resources>

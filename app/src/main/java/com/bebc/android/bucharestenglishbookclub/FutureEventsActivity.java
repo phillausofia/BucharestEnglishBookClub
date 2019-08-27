@@ -110,14 +110,14 @@ public class FutureEventsActivity extends AppCompatActivity {
                         adapter.addAll(futureEvents); }
                     else
                         //If not, we set message to the emptyView
-                        emptyTextView.setText("No future events found.");
+                        emptyTextView.setText(getResources().getString(R.string.no_future_events));
 
                     //Either way, the progressBar must be disable, so it won't rotate infinitely
                     progressBar.setVisibility(View.GONE);
                 } else {
                     //If there isn't any data, the progress bar is disabled and a message is shown
                     progressBar.setVisibility(View.GONE);
-                    emptyTextView.setText("No data found.");
+                    emptyTextView.setText(getResources().getString(R.string.no_data_found));
                 }
 
             }
