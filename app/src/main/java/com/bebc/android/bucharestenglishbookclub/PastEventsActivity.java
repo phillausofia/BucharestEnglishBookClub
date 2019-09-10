@@ -21,6 +21,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bebc.android.bucharestenglishbookclub.EventAdapter;
+import com.bebc.android.bucharestenglishbookclub.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -87,7 +89,7 @@ public class PastEventsActivity extends AppCompatActivity {
 
                         Event eventBookClub = eventSnapshot.getValue(Event.class);
 
-                        long currentUNIXTime = System.currentTimeMillis() * 1000L;
+                        long currentUNIXTime = System.currentTimeMillis() / 1000L;
 
                         if (currentUNIXTime > eventBookClub.getTimestamp()) {
                             pastEvents.add(eventBookClub);
