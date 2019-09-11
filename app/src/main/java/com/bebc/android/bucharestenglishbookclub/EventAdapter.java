@@ -19,7 +19,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -29,8 +35,12 @@ import static androidx.core.content.ContextCompat.startActivity;
 
 public class EventAdapter extends ArrayAdapter<Event> {
 
+    private StorageReference storageReference;
+
     public EventAdapter(Context context, List<Event> events) {
+
         super(context, 0, events);
+        storageReference = FirebaseStorage.getInstance().getReference();
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -41,10 +51,31 @@ public class EventAdapter extends ArrayAdapter<Event> {
         //We get the event at the current position in the list
         final Event currentEvent = getItem(position);
 
+        final ImageView eventImage = listItemView.findViewById(R.id.event_image);
+        assert currentEvent != null;
+        String imagePath = "eventsImages/" + (currentEvent.getId() + 142) + ".jpg";
+        StorageReference imageRef = storageReference.child(imagePath);
+        final View finalListItemView = listItemView;
+        imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(eventImage);
+                TextView imageURL = finalListItemView.findViewById(R.id.image_url);
+                imageURL.setVisibility(View.GONE);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                TextView imageURL = finalListItemView.findViewById(R.id.image_url);
+                eventImage.setVisibility(View.GONE);
+                imageURL.setText(e.getMessage());
+            }
+        });
+
         //We find the TextView that corresponds to the author_and_title ID
         TextView authorAndTitleView = (TextView) listItemView.findViewById(R.id.author_and_title);
         //We extract the author and title of the short story for the current event and display them
-        authorAndTitleView.setText(currentEvent.getAuthor() + " - " + currentEvent.getTitle());
+        authorAndTitleView.setText(String.format("%s - %s", currentEvent.getAuthor(), currentEvent.getTitle()));
 
         //We find the TextView with the id description and set on it the description text
         final TextView descriptionView = (TextView) listItemView.findViewById(R.id.description);
@@ -60,15 +91,24 @@ public class EventAdapter extends ArrayAdapter<Event> {
             @Override
             public void onClick(View v) {
                 if (shortDescription[0]) {
-                    descriptionView.setMaxLines(Integer.MAX_VALUE);
-                    shortDescription[0] = false;}
-                else
-                {
+                    descriptionView.setMaxLines(100);
+                    shortDescription[0] = false;
+                    readMoreTextView.setVisibility(View.GONE);}
+            }
+        });
+
+        descriptionView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!shortDescription[0]) {
                     descriptionView.setMaxLines(5);
                     shortDescription[0] = true;
+                    readMoreTextView.setVisibility(View.VISIBLE);
                 }
             }
         });
+
+
 
 
         //We create a date object from the timestamp in seconds
