@@ -19,6 +19,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -52,8 +54,9 @@ public class EventAdapter extends ArrayAdapter<Event> {
         descriptionView.setMaxLines(5);
         //And we create a boolean variable that tells us if the user sees only a summary or not
         final boolean[] shortDescription = {true};
-        //The description TextView will expand or contract when the users will press it
-        descriptionView.setOnClickListener(new View.OnClickListener() {
+        final TextView readMoreTextView = listItemView.findViewById(R.id.read_more);
+        //The description TextView will expand or contract when the users presses Read More
+        readMoreTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (shortDescription[0]) {

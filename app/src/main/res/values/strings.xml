@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Bucharest English Book Club</string>
-    <string name ="about">About</string>
-    <string name = "future_events">See future events</string>
-    <string name = "propose_short_story">Propose a short story</string>
-    <string name = "the_road_so_far">The road so far</string>
-    <string name = "about_description">The Bucharest English Book Club, formed in February 2015, is
+    <string name="about">About</string>
+    <string name="future_events">See future events</string>
+    <string name="propose_short_story">Propose a short story</string>
+    <string name="the_road_so_far">The road so far</string>
+    <string name="about_description">The Bucharest English Book Club, formed in February 2015, is
         a place where you can discuss short stories. Anybody can propose a short story. It should
         be no longer than 50 pages, available for free on the Internet and in English (translated
         or not). All the discussions are in English. It doesn\'t matter how fluent you are in
@@ -14,24 +14,27 @@
         Meetup - https://www.meetup.com/Bucharest-English-Book-Club/\n
         Facebook - https://www.facebook.com/groups/bucharestenglishbookclub/\n
         Couchsurfing - https://www.couchsurfing.com/events</string>
-    <string name = "Google_Docs_past_events">https://docs.google.com/document/d/1HYJ1v9DtryyYf7aE2zUWo_1cA5aZXhQ-tivTwpECcas/edit?usp=sharing</string>
-    <string name = "propose_button_text">propose</string>
-    <string name = "author">Author</string>
-    <string name = "title">Title</string>
-    <string name = "your_email">Your e-mail</string>
-    <string name = "url">URL</string>
-    <string name = "propose_introduction">Anybody can propose a short story, even if they can\'t
+    <string name="Google_Docs_past_events">https://docs.google.com/document/d/1HYJ1v9DtryyYf7aE2zUWo_1cA5aZXhQ-tivTwpECcas/edit?usp=sharing</string>
+    <string name="propose_button_text">propose</string>
+    <string name="author">Author</string>
+    <string name="title">Title</string>
+    <string name="your_email">Your e-mail</string>
+    <string name="url">URL</string>
+    <string name="propose_introduction">Anybody can propose a short story, even if they can\'t
     attend a meeting. The text that you want to propose must be under 50 pages (or around that
     number), available in English and online for free. To propose a short story, fill out the
     text fields bellow. It would be great if you also have a link to the text, but leave it blank
     if you don\'t have one. You can check the list of the short stories discussed before in
     \"The Road So Far\" section.</string>
-    <string name = "proposal_email_subject">Short story proposal</string>
+    <string name="proposal_email_subject">Short story proposal</string>
     <string name="proposal_email_address">iulian.pralea@hotmail.com</string>
     <string name="join_events_social_media">Join the event on social media:</string>
     <string name="no_future_events">No future events found.</string>
     <string name="no_data_found">No data found.</string>
     <string name="no_past_events">No past events found!</string>
     <string name="no_internet_connection">No Internet connection.</string>
+    <string name="read_more">Read more</string>
+    <string name="support_message">Feel like supporting the book club? Then all you have to do is click on some adds.</string>
+    <string name="support">Support</string>
 
 </resources>

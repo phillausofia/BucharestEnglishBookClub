@@ -35,6 +35,10 @@
             style="@style/CategoryStyle"
             android:text="@string/propose_short_story"
             android:id="@+id/propose"/>
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/support"
+            android:id="@+id/support"/>
 
         
 

@@ -16,14 +16,23 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         //We set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        //Setting up the AdView
+        String admobAppId = "ca-app-pub-3940256099942544~3347511713";
+        MobileAds.initialize(this, admobAppId);
+
 
 
          //We'll find all the TextView and set a click listener to each of them
@@ -77,6 +86,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent proposeShortStoryIntent = new Intent(MainActivity.this, ProposeActivity.class);
                 startActivity(proposeShortStoryIntent);
+            }
+        });
+
+        findViewById(R.id.support).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SupportActivity.class));
             }
         });
     }
