@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SupportActivity"></activity>
+        <activity android:name=".PastReadingsActivity"></activity>
+        <activity android:name=".SupportActivity" />
         <activity
             android:name=".AboutActivity"
             android:label="About" />
@@ -36,11 +37,10 @@
 
         <meta-data
             android:name="google_analytics_adid_collection_enabled"
-            android:value="false" />
-        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+            android:value="false" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
 
 </manifest>

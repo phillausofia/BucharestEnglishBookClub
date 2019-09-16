@@ -36,5 +36,7 @@
     <string name="read_more">Read more</string>
     <string name="support_message">Feel like supporting the book club? Then all you have to do is click on some adds.</string>
     <string name="support">Support</string>
+    <string name="no_past_readings">No past readings found.</string>
+    <string name="search">Search</string>
 
 </resources>

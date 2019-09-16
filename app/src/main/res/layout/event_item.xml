@@ -21,6 +21,7 @@ of Mrs. Stone"/>
         android:layout_height="wrap_content"
         android:id="@+id/event_image"
         android:adjustViewBounds="true"
+        android:maxHeight="200dp"
         android:scaleType="fitCenter"
         android:paddingBottom="16dp"/>
     <TextView

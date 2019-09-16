@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by Iulian Pralea on 9/14/19 8:24 PM
+  ~  * Copyright (c) 2019 . All rights reserved.
+  ~  * Last modified 9/14/19 8:24 PM
+  ~  */
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pastReading"
+        tools:text="1. Liviu Rebreanu - Ion"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"/>
+
+
+
+</LinearLayout>

@@ -71,10 +71,8 @@ public class MainActivity extends AppCompatActivity {
         pastEventsView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent pastEventsIntent = new Intent(Intent.ACTION_VIEW);
-                String stringUrl = getResources().getString(R.string.Google_Docs_past_events);
-                pastEventsIntent.setData(Uri.parse(stringUrl));
-                startActivity(pastEventsIntent);
+
+                startActivity(new Intent(MainActivity.this, PastReadingsActivity.class));
 
             }
         });

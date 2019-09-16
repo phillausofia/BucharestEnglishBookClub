@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by Iulian Pralea on 9/15/19 12:06 PM
+  ~  * Copyright (c) 2019 . All rights reserved.
+  ~  * Last modified 9/15/19 12:06 PM
+  ~  */
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/searchPastReadings"
+        android:title="@string/search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always"/>
+
+</menu>
